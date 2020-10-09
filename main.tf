@@ -33,6 +33,10 @@ resource "aws_spot_instance_request" "instance" {
     custom_user_data = var.user_data
   })
   disable_api_termination = var.termination_protection
+  root_block_device {
+    volume_size = var.volume_size
+    volume_type = var.volume_type
+  }
 }
 
 # Create elastic IPs where required
