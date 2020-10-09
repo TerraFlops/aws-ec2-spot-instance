@@ -91,12 +91,12 @@ variable "termination_protection" {
 variable "spot_price" {
   description = "The maximum price to request on the spot market."
   type = number
-  default = None
+  default = null
 }
 
 variable "wait_for_fulfillment" {
   description = "If set, Terraform will wait for the Spot Request to be fulfilled, and will throw an error if the timeout of 10m is reached."
-  default = None
+  default = null
 }
 
 variable "spot_type" {
@@ -108,13 +108,13 @@ variable "spot_type" {
 variable "launch_group" {
   description = "A launch group is a group of spot instances that launch together and terminate together. If left empty instances are launched and terminated individually."
   type = string
-  default = None
+  default = null
 }
 
 variable "block_duration_minutes" {
   description = "The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360)."
   type = number
-  default = None
+  default = null
 }
 
 variable "instance_interruption_behaviour" {
@@ -126,11 +126,11 @@ variable "instance_interruption_behaviour" {
 variable "valid_until" {
   description = "The end date and time of the request, in UTC RFC3339 format(for example, YYYY-MM-DDTHH:MM:SSZ)."
   type = string
-  default = None
+  default = null
 }
 
 variable "valid_from" {
   description = "The start date and time of the request, in UTC RFC3339 format(for example, YYYY-MM-DDTHH:MM:SSZ)."
   type = string
-  default = None
+  default = null
 }
