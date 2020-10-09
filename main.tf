@@ -48,5 +48,5 @@ resource "aws_eip" "server_eip" {
 resource "aws_eip_association" "server_eip_association" {
   count = var.elastic_ip == true ? 1 : 0
   public_ip = aws_eip.server_eip[0].public_ip
-  instance_id = aws_instance.instance.id
+  instance_id = aws_spot_instance_request.instance.id
 }

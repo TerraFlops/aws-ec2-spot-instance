@@ -1,26 +1,26 @@
 output "instance_id" {
   description = "The AWS instance ID of the newly launched instance"
-  value = aws_instance.instance.id
+  value = aws_spot_instance_request.instance.id
 }
 
 output "instance_arn" {
   description = "The AWS ARN of the newly launched instance"
-  value = aws_instance.instance.arn
+  value = aws_spot_instance_request.instance.arn
 }
 
 output "instance_public_ip" {
   description = "The public IP address of the instance"
-  value = aws_instance.instance.public_ip
+  value = aws_spot_instance_request.instance.public_ip
 }
 
 output "instance_public_dns_name" {
   description = "The public DNS name of the instance"
-  value = aws_instance.instance.public_dns
+  value = aws_spot_instance_request.instance.public_dns
 }
 
 output "instance_private_ip" {
   description = "The private IP address of the instance"
-  value = aws_instance.instance.private_ip
+  value = aws_spot_instance_request.instance.private_ip
 }
 
 output "eip_public_ip" {
