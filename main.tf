@@ -25,6 +25,7 @@ resource "aws_spot_instance_request" "instance" {
     ignore_changes = [
       key_name
     ]
+    create_before_destroy = false
   }
   # If authorized keys were set, populate user data script to set them on every boot
   user_data = var.authorized_keys == null ? null : templatefile("${path.module}/userdata.sh", {
